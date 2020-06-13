@@ -1,0 +1,18 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      uri: http://localhost:1000
+  application:
+    name: football-data-batch
+
+server:
+  port: 0
+
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://configuration-service:1000
